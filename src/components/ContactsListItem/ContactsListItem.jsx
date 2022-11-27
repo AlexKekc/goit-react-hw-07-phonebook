@@ -3,7 +3,8 @@ import { deleteContact } from 'redux/operations';
 import PropTypes from 'prop-types';
 import {
   ContactItem,
-  ContactData,
+  ContactName,
+  ContactNumber,
   DeleteButton,
 } from './ContactsListItem.styled.js';
 
@@ -13,8 +14,8 @@ export const ContactsItem = ({ id, name, number }) => {
 
   return (
     <ContactItem key={id}>
-      <ContactData>{name}:</ContactData>
-      <ContactData>{number}</ContactData>
+      <ContactName>{name}:</ContactName>
+      <ContactNumber>{number}</ContactNumber>
       <DeleteButton type="button" onClick={handleDelete}>
         Delete
       </DeleteButton>

@@ -3,14 +3,19 @@ import styled from '@emotion/styled';
 export const ContactItem = styled.li`
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
-  width: 350px;
+  width: 450px;
 
   margin-top: ${p => p.theme.space[3]}px;
 `;
 
-export const ContactData = styled.span`
+export const ContactName = styled.span`
+  font-size: ${p => p.theme.fontSizes.m};
+  font-weight: ${p => p.theme.fontWeights.semiBold};
+`;
+
+export const ContactNumber = styled.span`
+  margin-left: ${p => p.theme.space[2]}px;
   font-size: ${p => p.theme.fontSizes.m};
   font-weight: ${p => p.theme.fontWeights.normal};
 `;
@@ -20,6 +25,7 @@ export const DeleteButton = styled.button`
   padding-bottom: ${p => p.theme.space[1]}px;
   padding-left: ${p => p.theme.space[2]}px;
   padding-right: ${p => p.theme.space[2]}px;
+  margin-left: auto;
 
   border: ${p => p.theme.borders.normal};
   border-radius: ${p => p.theme.radii.normal};
