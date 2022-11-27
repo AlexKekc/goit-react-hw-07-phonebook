@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact, getContacts } from 'redux/contactsSlice';
+import { selectContacts } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import { Formik } from 'formik';
 import { contactsSchema } from '../../validation';
 import toast from 'react-hot-toast';
@@ -16,7 +17,7 @@ const initialValues = { name: '', number: '' };
 
 export const AddingContactsForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
 
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
     if (contacts.find(contact => contact.name === values.name)) {
