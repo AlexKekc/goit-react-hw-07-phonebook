@@ -14,7 +14,7 @@ Created my own personal backend for development with the UI service
 Added the load and error indicator handling to the Redux state. For do this, I
 have changed the state form.
 
-{ contacts: { items: [], isLoading: false, error: null }, filter: "" }
+`{ contacts: { items: [], isLoading: false, error: null }, filter: "" }`
 
 ## Operations
 
